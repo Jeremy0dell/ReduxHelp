@@ -64,10 +64,10 @@ export default connect(
     json: state.jsonField,
     checkFields: state.checkFields
   }),
-  // { // THIS FUNCTION, mapDispatchToProps, CAN BE AN OBJECT
-  //   inc: () => ({ type: 'COUNTER_INCREMENT' }),
-  //   upsert: event => ({ type: 'TEXTFIELD_UPSERT', value: event.target.value}),
-  //   getJsonApi
-  // ?
+  { // THIS FUNCTION, mapDispatchToProps, CAN BE AN OBJECT
+    inc: () => ({ type: 'COUNTER_INCREMENT' }),
+    upsert: event => ({ type: 'TEXTFIELD_UPSERT', value: event.target.value }),
+    getJsonApi,
+    changeCheckbox: event => ({ type: 'CHECKFIELDS_EDIT', value: event.target.value })
   }
 )(App);
